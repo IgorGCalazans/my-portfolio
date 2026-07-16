@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulador de Prestamo</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+    <div class="proyeto-container">
+        <div class="proyeto-calculadora">
+            <h1>Calculadora de Prestamo</h1>
+            <p>Una calculadora para saber cuanto de intereses y las cuotas a pagar.</p>
+
+            <button onclick="calcularPrestamo()">Calcular Prestamo</button>
+        </div>
+    </div>
+        <script>
+
+            function calcularPrestamo(){
+                
+                let cantidad = parseFloat(prompt("¿Qué cantidad de dinero necesitas solicitar? (€)"));
+
+                if (isNaN(cantidad) || cantidad <= 0){
+                    alert("Por favor, introduzca una cantidad de dinero válida.");
+                    return;
+                }
+
+                let plazos = prompt("Seleccione el plazo de devolucíon:\n1 - 12 meses (5% interés)\n2 - 24 meses (10% interés)\n3 - 36 meses (15% interés)");
+
+                let tasaInteres;
+                let meses;
+
+                if (plazos === "1" || plazos === "12"){
+                    tasaInteres = 0.05;
+                    meses = 12;
+                } else if (plazos === "2" || plazos === "24"){
+                    tasaInteres = 0.10;
+                    meses = 24;
+                } else if (plazos === "3" || plazos === "36"){
+                    tasaInteres = 0.15;
+                    meses = 36;
+                } else {
+                    alert("Opcíon no válida, Por favor, intente de nuevo.");
+                    return; 
+                }
+
+                let totalIntereses = cantidad * tasaInteres;
+                let valorPrestamo = cantidad + totalIntereses;
+                let cuotaMensual = valorPrestamo / meses;
+
+                let formatoEuro = new Intl.NumberFormat('es-ES', {
+                    style: 'currency', 
+                    currency: 'EUR'
+                });
+                
+                alert("Resumen de su préstamo:\n" + 
+                    "- Total a devolver: " + formatoEuro.format(valorPrestamo) + "\n" + 
+                    "- Intereses aplicados: " + formatoEuro.format(totalIntereses) + "\n" + 
+                    "- Cuota mensual (" + meses + " meses): " + formatoEuro.format(cuotaMensual));       
+            }
+
+        </script>
+    
+</body>
+</html>
