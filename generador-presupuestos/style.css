@@ -1,0 +1,118 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Segoe 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f7f6;
+    color: #333333;
+}
+
+.proyecto-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.proyecto-calculadora {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    width: 100%;
+    max-width: 480px;
+}
+
+.proyecto-calculadora h1 {
+    font-size: 1.8rem;
+    color: #111111;
+    margin-bottom: 10px;
+}
+
+.proyecto-calculadora p {
+    font-size: 0.95rem;
+    color: #717070;
+    margin-bottom: 25px;
+    line-height: 1.5;
+}
+
+.campo-grupo {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.campo-grupo label {
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: #444444;
+    margin-bottom: 8px;
+}
+
+.campo-grupo input {
+    padding: 14px;
+    font-size: 1rem;
+    border: 2px solid #e0e0e0;
+    border-radius: 6px;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.campo-grupo input:focus {
+    border-color: #0070f3;
+}
+
+.proyecto-calculadora button {
+    background-color: #0070f3;
+    color: white;
+    border: none;
+    padding: 15px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    width: 100%;
+    transition: all 0.3s ease;
+}
+
+.proyecto-calculadora button:hover {
+    background-color: #0051a8;
+    transform: translateY(-2px);
+    box-shadow: 0 5px rgba(0, 112, 243, 0.3);
+}
+
+.resultado-zona {
+    margin-top: 30px;
+    text-align: left;
+}
+
+.recibo-resumen {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    border-left: 4px solid #0070f3;
+}
+
+.recibo-resumen p {
+    margin-bottom: 12px !important;
+    display: flex;
+    justify-content: space-between;
+}
+
+.recibo-resumen hr {
+    border: 0;
+    border-top: 1px dashed #cccccc;
+    margin: 15px 0;
+}
+
+.recibo-resumen h3 {
+    font-size: 1.2rem;
+    color: #111111;
+    display: flex;
+    justify-content: space-between;
+}
