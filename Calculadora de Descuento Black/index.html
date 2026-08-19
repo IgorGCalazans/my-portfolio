@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ejercicio-fijacion</title>
+</head>
+<body>
+    <div class="proyecto-container">
+
+        <h1>Descuento Black Friday</h1>
+        <input type="number" id="precioPrenda">
+
+        <button onclick="calcularDescuento()">Calcular Descuento</button>
+
+        <div id="resultadoDescuento"></div>
+
+    </div>
+    <script>
+
+        function calcularDescuento() {
+            let precio = parseFloat(document.getElementById('precioPrenda').value);
+            let descuento = precio * 0.30;
+            let precioFinal = precio - descuento; 
+
+            let formatoEuro = new Intl.NumberFormat('es-ES', {
+                style: 'currency',
+                currency: 'EUR'
+            });
+
+            document.getElementById('resultadoDescuento').innerHTML = `
+        <div style="background-color: #e8f5e9; padding: 20px; border-radius: 8px; margin-top: 20px; border-left: 5px solid #2e7d32;">
+            <p><strong>Precio Original:</strong> ${formatoEuro.format(precio)}</p>
+            <p style="color: #c62828;"><strong>Descuento (30%):</strong> - ${formatoEuro.format(descuento)}</p>
+            <hr style="border: 0; border-top: 1px dashed #ccc; margin: 10px 0;">
+            <h3 style="color: #2e7d32;">Precio Final: ${formatoEuro.format(precioFinal)}</h3>
+        </div>
+    `;
+            
+        }
+
+        
+
+    </script>
+</body>
+</html>
