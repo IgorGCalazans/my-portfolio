@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Propina</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+    <div class="proyecto-container">
+
+        <div class="proyecto-calculadora">
+            <h1>Calculadora de Propina</h1>
+            <p>Introduce el total de la cuenta para calcular el 10% de la propina del camarero</p>
+
+            <div class="campo-grupo">
+                <input type="number" id="valorCuenta" placeholder="Ej: 50.00">
+            </div>
+
+            <button onclick="calcularPropina()">Calcular Propina</button>
+            <div id="resultadoPropina" class="resultado-zona"></div>
+        </div>    
+    </div>
+</body>
+
+<script>
+
+    function calcularPropina(){
+        let valorCuenta = parseFloat(document.getElementById('valorCuenta').value);
+        let propina = valorCuenta * 0.10;
+        let resultadoPropina = valorCuenta + propina
+
+        let formatoEuro = new Intl.NumberFormat('es-ES', {
+            style: 'currency',
+            currency: 'EUR'
+        });
+
+        document.getElementById('resultadoPropina').innerHTML = `
+            <div>
+                <p>Subtotal (Cuenta): ${formatoEuro.format(valorCuenta)}</p>
+                <p>Propina (10%): + ${formatoEuro.format(propina)}</p>
+                <hr>
+                <h3>Total a Pagar: ${formatoEuro.format(resultadoPropina)}</h3>
+            </div>
+            `;    
+
+            }
+    
+</script>
+
+</html>
