@@ -1,0 +1,170 @@
+body {
+     margin: 0;
+     margin-top: 50px;
+     background: rgb(233, 233, 233);
+     font-family: sans-serif;     
+}
+
+header {
+    margin-bottom: 50px;
+}
+
+#hobbies h2 {
+    max-width: 1200px;
+    margin: 40px auto 10px auto;
+    padding: 0 20px;
+    color: #333;
+}
+
+#projetos h2, p {
+    max-width: 1200px;
+    margin: 40px auto 10px auto;
+    padding: 0 20px;
+    color: #333;
+    
+}
+
+.profile-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.profile-links {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.link-button {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #ffffff;
+    padding: 8px 16px;
+    border-radius: 8px;
+    width: 200px;
+    text-decoration: none;
+    color: #333333;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+
+}
+
+.link-img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
+.link-button:hover {
+    transform: translateX(-4px);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
+    background-color: #f8fafc;
+}
+
+#habilidades {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.hobby-card {
+    flex: 1;
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0px 5px 9px rgba(0, 0, 0, 0.05);
+}
+
+.icon-container {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.icon-container img {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+}
+
+.titulo-hobbies {
+    color: #333333;
+    margin: 0;
+    font-size: 18px;
+    margin: 0 0 10px 0;
+}
+
+.card-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.green {
+  background-color: #e6f4ea; /* Verde campo */
+  color: #137333;
+}
+.blue {
+  background-color: #e8f0fe; /* Azul céu */
+  color: #0d4a9b;
+}
+.orange {
+  background-color: #fef7e0; /* Laranja gamer */
+  color: #b06000;
+}
+
+footer {
+    text-align: center;
+    margin-top: 50px;
+    padding: 20px;
+    color: #5a5a5a;
+    font-size: 14px;
+}
+
+.projeto-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin: 40px;
+}
+
+.projeto-card {
+    background-color: #ffffff;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    border-radius: 12px;
+    padding: 30px;
+    width: 320px;
+}
+
+.projeto-card button {
+    background-color: #0070f3;
+    color: #ffffff;
+    border: none;
+    padding: 12px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 10px;  
+    transition: all 0.3s ease; 
+}
+.projeto-card button:hover {
+    background-color: #0051a8;
+    transform: translateY(-4px);
+    box-shadow: 0 5px 15px rgba(0, 112, 243, 0.4);
+}

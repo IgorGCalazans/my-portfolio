@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Meu Portifólio Igor Gomes Calazans</title>
+
+        <link rel="stylesheet" href="estilo.css">
+
+    </head>
+    <body>
+
+        <header>
+            <img src="img/igorcalazans.png" alt="Foto de perfil de Igor Calazans" width="100%" >
+        </header>
+
+        <main>
+
+            <section class="profile-container">
+                <div class="profile-text">
+                    <h1>Ola meu nome e Igor Calazans</h1>
+                    <p>
+                    Meu nome e Igor Gomes Calazans, atualmente minha profissao e Mecanico de carros. 
+                    Comecei a estudar programacao no final de 2025, estou comecando com HTML, CSS e JavaScript.
+                    </p>
+                </div>
+
+                <div class="profile-links">
+                        
+                    <a href="https://www.linkedin.com/in/igor-calazans-14679012a/?locale=pt" target="_blank" rel="noopener noreferrer" class="link-button">
+                        <img src="img/linkedin.png" alt="logo do linkedin" class="link-img">
+                         Linkedin
+                    </a>                    
+                    <a href="https://github.com/IgorGCalazans" target="_blank" rel="noopener noreferrer" class="link-button">
+                        <img src="img/github.png" alt="lodo do GitHub" class="link-img">
+                         Github
+                    </a>                    
+                      
+                </div>
+            </section>
+    
+
+        <section id="hobbies">
+
+            <h2>Meus Hobbies</h2>
+    
+            <div id="habilidades">
+        
+                <div class="hobby-card" id="futebol">
+                    <div class="card-header">
+                        <div class="icon-container green">
+                            <img src="img/jogador-de-futebol.png" alt="Ícone de Futebol" class="png-icon">                        
+                        </div>
+                            <h3 class="titulo-hobbies">Futebol</h3>                           
+                    </div>
+
+                    <p>
+                    Participo de um time de veteranos a mais de 2 anos, 
+                    se chama Veteranos de Malgrat de Mar. 
+                    </p>
+                </div>
+            
+                <div class="hobby-card" id="ciclismo">
+                    <div class="card-header">
+                        <div class="icon-container orange">
+                            <img src="img/ciclismo.png" alt="Ícone de Ciclismo" class="png-icon">                        
+                        </div>  
+                        <h3 class="titulo-hobbies">Ciclismo</h3>
+                    </div>
+
+                    <p>
+                    Gosto de fazer trilhas com a bici, 
+                    conhecer varios caminhos diferentes e novas paisagens.                 
+                    </p>
+                </div>
+
+                <div class="hobby-card" id="game">
+                    <div class="card-header">
+                        <div class="icon-container blue">
+                            <img src="img/jogador.png" alt="Ícone de Controle de videogame" class="png-icon">                        
+                        </div>
+                        <h3 class="titulo-hobbies">Games</h3>
+                    </div>
+
+                    <p>
+                    Gosto de pasar tempo com meus 
+                    amigos de infancia jogando Dota 1.
+                    </p>
+                    
+                </div>
+
+            </div>        
+        </section>
+
+        </main>
+
+        <section id="projetos">
+
+                <h2>Meus Projetos de programação</h2>
+                <p>Aqui estão alguns desafios de logíca de programação que desenvolvi em JavaScript:</p>
+
+            <div class="projeto-container">
+
+                <div class="projeto-card">
+                    <h3>🎮 Jogo do Número Secreto</h3>
+                    <p>
+                        O computador sorteia um número aleatório de 1 a 5 e desafia o usuátio a acertar, 
+                        utilizando lógica condicional estrita.
+                    </p>
+                    <button onclick="jogarNumeroSecreto()">Jogar Agora</button>
+                </div>
+
+                <div class="projeto-card">
+                    <h3> Validador de Empréstimo Bancário</h3>
+                    <p>
+                        Sistema automatizado que valida a liberação de crédito analisando idade, salário e histórico de dívidas
+                        do cliente através de operadores lógicos.
+                    </p>
+                    <button onclick="validarEmprestimo()">Testar Sistema</button>
+                </div>
+
+                <div class="projeto-card">
+                    <h3> Calculadora de Consumo de combustivel</h3>
+                    <p>
+                        Uma calculadora para poder calcular quanto de combustivel 
+                        vai gastar em sua viajem.
+                    </p>
+                    <button onclick="consumoMedio()">Calcular Consumo</button>
+                </div>
+
+            </div>
+        </section>
+
+        <footer>
+            <p>© 2026 - Igor Gomes Calazans</p>
+        </footer>
+
+        <script>
+            // Projeto 1: Jogo do Número Secreto
+            function jogarNumeroSecreto() {
+                let sorteio = Math.floor(Math.random() * 5) + 1;
+                let usuario = parseInt(prompt("Tente a Sorte, Digite um número de 1 a 5"));
+
+                if (usuario === sorteio) {
+                    alert("🎉 Você acertou! O número correto foi " + sorteio);
+                } else {
+                    alert("❌ Você errou! O número correto era " + sorteio);
+                }
+            }
+
+            // Projeto 2: Validador de Empréstimo
+            function validarEmprestimo() {
+                let idade = parseFloat(prompt("Qual é a sua idade? "));
+                let salario = parseFloat(prompt("Qual é o seu salario? "));
+                let nomeLimpo = prompt("Você tem alguma dívida? (resposta com 1 para 'sim' ou 2 para 'não')").toLowerCase();
+
+                if (idade >= 18 && salario >= 2500 && nomeLimpo === '2') {
+                    alert("✅ Empréstimo Aprovado");
+                } else {
+                    alert("❌ Empréstimo Recusado");
+                }
+            }
+
+
+            // Projeto 3: Calculadora de consumo de Combustivel
+            function consumoMedio() {
+                let tipoCarro = prompt("Qual o tamanho do seu carro? Digite 1 para Pequeno(HB20, Gol) Digite 2 para Médio(Corolla, Civil) Digite 3 para Grande(SUV)");
+                let km = parseFloat(prompt("Quantos quilômetros (KM) você vai percorrer na viagem? "));
+                let precoCombustivel = parseFloat(prompt("Qual e o preço medio do litro do combustivel? "));
+                
+                let consumoMedio;
+
+                if (tipoCarro === "1"){
+                     consumoMedio = 13;     
+                } else if (tipoCarro === "2") {
+                     consumoMedio = 10;
+                } else if (tipoCarro === "3") {
+                     comsumoMedio = 8;
+                } else {
+                    alert("Opção inválida! Vamos considerar uma média padrão de 10 km/l.");
+                    comsumoMedio = 10;
+                }
+
+                let litrosNecessarios = km / consumoMedio;
+                let custoTotal = litrosNecessarios * precoCombustivel;
+
+                alert("Para essa viagem, o ccusto total estimado com combustível sera de: R$ " + custoTotal.toFixed(2));
+            }
+
+        </script>
+
+    </body>
+</html>
